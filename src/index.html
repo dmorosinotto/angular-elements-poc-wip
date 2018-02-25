@@ -7,8 +7,45 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <title>angular-element-poc-wip</title>
 </head>
 <body>
-  <app-root></app-root>
+<h1>Angular Element POC WIP</h1>
+<h5>Forked <a href="https://stackblitz.com/edit/angular-ce-poc-wip">https://stackblitz.com/edit/angular-ce-poc-wip</a> with latest dependency</h5>
+Read more about <a href="https://medium.com/vincent-ogloblinsky/export-angular-components-as-custom-elements-with-angular-elements-a2a0bfcd7f8a">Elements here</a>
++ <a href="https://github.com/vogloblinsky/angular-elements-demo">simple demo</a>
+and <a href="http://www.andrewconnell.com/blog/solve-the-sharepoint-framework-angular-challenge-with-angular-5-0-elements">here</a> for <b>AOT and no zone.js</b>
+<p>Original @angular/element <a href="https://github.com/angular/angular/tree/labs/elements/packages/elements/src">lab Repo</a>
++ for <a href="https://github.com/angular/elements-builds#labs/elements"><i>"official" elements build</i></a> add dependency <code>"@angular/elements": "github:angular/elements-builds#labs/elements"</code></p>
+<hr />
+<p>
+  <b>Greet1Component:</b>
+  <my-greet-1 name="person1" id="one">
+    How are you?
+    <button class="delete-btn" onclick="javascript:one.detach()">
+      Delete
+    </button>
+  </my-greet-1>
+</p>
+<p>
+  <b>Greet2Component:</b>
+  <my-greet-2 name="person2" id="two">
+    <i>What's up?</i>
+    <button class="delete-btn" onclick="javascript:two.detach()">
+      X
+    </button>
+  </my-greet-2>
+</p>
+<p>
+  <b>Greet3Component:</b>
+  <my-greet-3 name="person3" id="three">
+    How <b>you</b> doing?
+    <button class="delete-btn" onclick="javascript:alert('Not this time!')">
+      I feel lucky
+    </button>
+  </my-greet-3>
+</p>
+
 </body>
 </html>

@@ -1,18 +1,20 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
+import {Greet1Component} from './greet-1.component';
+import {Greet2Component} from './greet-2.component';
+import {Greet3Component} from './greet-3.component';
 
-import { AppComponent } from './app.component';
-
+export const entryComponents = [Greet1Component, Greet2Component, Greet3Component];
 
 @NgModule({
-  declarations: [
-    AppComponent
+  imports: [BrowserModule],
+  providers: [
+    {provide: 'TEST_VALUE', useValue: 'TEST'},
   ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [...entryComponents],
+  entryComponents,
 })
-export class AppModule { }
+export class AppModule {
+  ngDoBootstrap() {}
+}
